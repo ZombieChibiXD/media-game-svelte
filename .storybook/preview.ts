@@ -1,6 +1,6 @@
 import type { Preview } from '@storybook/sveltekit'
 // @ts-ignore
-import '../src/routes/layout.css'
+import '../src/app.css'
 const preview: Preview = {
   parameters: {
     controls: {
