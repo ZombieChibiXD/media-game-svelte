@@ -22,14 +22,36 @@
 		<p>Rotate your device</p>
 	</div>
 {:else}
-	<div class="viewport bg-black h-screen w-screen flex items-center justify-center">
-		<div class="game aspect-video max-w-svw max-h-svh w-full h-auto bg-red-500">
-			{@render children()}
-		</div>
+	<div class="viewpot bg-black flex items-center justify-center w-screen h-screen">
+    <div class="game-container">
+      <div class="game border border-white text-white relative">
+        {@render children()}
+      </div>
+    </div>
 	</div>
 {/if}
 
 <style>
+  .game-container {
+    container-type: size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+  }
+  .game {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+  @container (min-aspect-ratio: 16 / 9) {
+    .game {
+      width: auto;
+      height: 100%;
+    }
+  }
+
   .rotate-overlay {
     position: fixed;
     inset: 0;
