@@ -1,6 +1,8 @@
 import type { SVGAttributes } from "svelte/elements";
 
 export type AnimalProps = {
-    animate?: () => void;
+    animate_frown?: () => void;
+    animate_wag?: () => void;
+    animate_playful?: () => void;
     el?: SVGElement
 } & SVGAttributes<SVGElement>;
