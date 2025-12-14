@@ -1,8 +1,9 @@
 <script>
 	import { cn } from "$lib/utils";
+	import Landing from './Landing.jpg'
 
 </script>
-
+<img src={Landing} alt="Landing" srcset="">
 <a
     href="/loading"
 	class={cn(
