@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { cn } from "$lib/utils";
+
 </script>
 
 <style>
@@ -10,6 +12,6 @@
     }
 </style>
 
-<div class="loading-background {($$restProps.class ?? '')}" style="{($$restProps.style ?? 'width: 100%; height: 100%;')}">
+<article class="loading-background {cn('w-full h-full', $$restProps.class)}">
     <slot />
-</div>
+</article>

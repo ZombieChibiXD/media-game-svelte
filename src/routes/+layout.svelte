@@ -1,5 +1,6 @@
 <script lang="ts">
 	import '../app.css';
+  import { onNavigate } from '$app/navigation';
 	import { onMount } from "svelte";
 
 
@@ -15,6 +16,20 @@
     updateOrientation();
     window.addEventListener("resize", updateOrientation);
   });
+
+  onNavigate((navigation) => {
+    if (!document.startViewTransition) return;
+
+    return new Promise((resolve) => {
+      document.startViewTransition(async () => {
+        resolve();
+        await navigation.complete;
+      });
+    });
+  });
+
+  let layoutWidth = $state(0);
+  let layoutHeight = $state(0);
 </script>
 
 {#if !isLandscape}
@@ -24,7 +39,7 @@
 {:else}
 	<div class="viewpot bg-black flex items-center justify-center w-screen h-screen">
     <div class="game-container">
-      <div class="game border border-white text-white relative">
+      <div class="game border border-white text-white relative overflow-hidden" bind:clientWidth={layoutWidth} bind:clientHeight={layoutHeight} style="--view-width: {layoutWidth}px; --view-height: {layoutHeight}px">
         {@render children()}
       </div>
     </div>
@@ -32,6 +47,10 @@
 {/if}
 
 <style>
+  :root {
+    --view-width: 0px;
+    --vew-height: 0px;
+  }
   .game-container {
     container-type: size;
     display: flex;

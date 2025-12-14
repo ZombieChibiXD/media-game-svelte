@@ -6,7 +6,7 @@
 	const Selected = BackgroundComponents[type];
 </script>
 {#if Selected}
-	<svelte:component this={Selected} class="{($$restProps.class ?? '')}">
+	<svelte:component this={Selected} {...$$restProps}>
 		<slot />
 	</svelte:component>
 {:else}
