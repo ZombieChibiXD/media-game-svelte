@@ -1,6 +1,6 @@
 import type { ComponentName } from "./assets/animals";
 
-interface AnimalList {
+export interface AnimalItem {
     type: ComponentName;
     x:number;
     y:number;
@@ -8,7 +8,7 @@ interface AnimalList {
     name: string;
     description: string;
 }
-export const animalListing: AnimalList[] = [
+export const animalListing: AnimalItem[] = [
     {
         type: 'Bat',
         x: 300,
