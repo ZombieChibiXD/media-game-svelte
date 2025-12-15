@@ -14,48 +14,27 @@ const meta = {
 			options: ComponentNames
 		},
 		animate: {
-			type: 'function',
+			control: 'select',
+			options: [ null, 'walk']
 		}
 	},
 	args: {
 		width: '200px',
 	},
-	play: async ({ component, canvas, userEvent })=>{
-		console.log('hello')
-		console.log(component)
-	}
 } satisfies Meta<typeof Animal>
 
 export default meta;
 
-type Story = StoryObj<typeof Animal>;
+type AnimalStory = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Default: AnimalStory = {
 	args: {
 		type: undefined
 	}
 };
 
-export const Dog: Story = {
+export const Dog: AnimalStory = {
 	args: {
 		type: 'Dog'
-	}
-};
-
-export const Cat: Story = {
-	args: {
-		type: 'Cat'
-	}
-};
-
-export const Mouse: Story = {
-	args: {
-		type: 'Mouse'
-	}
-};
-
-export const Crocodile: Story = {
-	args: {
-		type: 'Crocodile'
 	}
 };
