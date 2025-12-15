@@ -75,7 +75,7 @@
 
 	{#snippet children({ fnAnimateState, buttonState })}
 		<Animal
-			type="Lion"
+			type="Tiger"
 			class="p-[0.5cqb] bg-green-200/50 border-8 border-amber-300 aspect-square rounded-full"
 			animate={fnAnimateState(buttonState)}
 		/>
@@ -97,7 +97,23 @@
 				return null;
 		}
 	}}
-/>
+	href="game-3"
+>
+
+
+	{#snippet children({ fnAnimateState, buttonState })}
+		<Animal
+			type="Dog"
+			class="p-[0.5cqb] bg-green-200/50 border-8 border-amber-300 aspect-square rounded-full"
+			animate={fnAnimateState(buttonState)}
+		/>
+		<span
+			class="uppercase text-[2.5cqb] font-extrabold font-schoolbell text-black text-center text-wrap text-outlined"
+		>
+			Cari Hewan
+		</span>
+	{/snippet}
+</Button>
 
 
 <button onclick={()=>{ goto('/main-menu') }} title="Navigate back" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 left-0 m-[2cqb] p-[2cqb] rounded-lg">
