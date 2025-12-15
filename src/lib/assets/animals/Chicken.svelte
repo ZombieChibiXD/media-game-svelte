@@ -131,9 +131,6 @@
 {#snippet Animal(restProps: AnimalProps)}
 	<svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 757.48 922.78" bind:this={el}>
 		<defs>
-			<style>
-        .cls-1{fill:#215642;}.cls-2{fill:#dc1a1a;}.cls-3{fill:#fec80c;}.cls-4{fill:#ab2617;}.cls-5{fill:#f7ae23;}.cls-6{fill:#f18c18;}.cls-7{fill:#9d0e08;}.cls-8{fill:#e21d27;}.cls-9{fill:#b00a0e;}.cls-10{fill:#ffcf43;}.cls-11{fill:#7a2415;}.cls-12{fill:#fffefe;}
-			</style>
 		</defs>
 		<g id="Layer_2" data-name="Layer 2">
 			<g id="Layer_15" data-name="Layer 15">
@@ -204,3 +201,7 @@
 		</g>
 	</svg>
 {/snippet}
+
+			<style>
+        .cls-1{fill:#215642;}.cls-2{fill:#dc1a1a;}.cls-3{fill:#fec80c;}.cls-4{fill:#ab2617;}.cls-5{fill:#f7ae23;}.cls-6{fill:#f18c18;}.cls-7{fill:#9d0e08;}.cls-8{fill:#e21d27;}.cls-9{fill:#b00a0e;}.cls-10{fill:#ffcf43;}.cls-11{fill:#7a2415;}.cls-12{fill:#fffefe;}
+			</style>

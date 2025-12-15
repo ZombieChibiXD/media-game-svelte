@@ -8,9 +8,6 @@
 
 <svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 888.24 862.69">
 	<defs>
-		<style>
-.cls-1{fill:#803850;}.cls-2{fill:#693041;}.cls-3{fill:#fbdd09;}.cls-4{fill:#e94b1b;}.cls-5{fill:#ccc;}.cls-6{fill:#772f57;}.cls-7{fill:#e13a41;}.cls-8{fill:#e6e6e6;}.cls-9{fill:#6d3f25;}.cls-10{fill:#b3b3b3;}.cls-11{fill:#fcf004;}.cls-12{fill:#fcfcfe;}.cls-13{fill:#aa9fd7;}.cls-14{fill:#31124d;}.cls-15{fill:#01528a;}.cls-16{fill:#fdba23;}.cls-17{fill:#2d0a10;}.cls-18{fill:#47d2f3;}
-		</style>
 	</defs>
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_2-2" data-name="Layer 2">
@@ -153,3 +150,7 @@
 		</g>
 	</g>
 </svg>
+
+		<style>
+.cls-1{fill:#803850;}.cls-2{fill:#693041;}.cls-3{fill:#fbdd09;}.cls-4{fill:#e94b1b;}.cls-5{fill:#ccc;}.cls-6{fill:#772f57;}.cls-7{fill:#e13a41;}.cls-8{fill:#e6e6e6;}.cls-9{fill:#6d3f25;}.cls-10{fill:#b3b3b3;}.cls-11{fill:#fcf004;}.cls-12{fill:#fcfcfe;}.cls-13{fill:#aa9fd7;}.cls-14{fill:#31124d;}.cls-15{fill:#01528a;}.cls-16{fill:#fdba23;}.cls-17{fill:#2d0a10;}.cls-18{fill:#47d2f3;}
+		</style>

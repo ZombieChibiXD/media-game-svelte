@@ -10,9 +10,6 @@
 
 <svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 681.76 868.07">
 	<defs>
-		<style>
-.cls-1{fill:#ff9a0e;}.cls-2{fill:#fc9c0a;}.cls-3{fill:#fee0a4;}.cls-4{fill:#e3500b;}.cls-5{fill:#fb9d00;}.cls-6{fill:#f55605;}.cls-7{fill:#f37000;}.cls-8{fill:#af2e00;}.cls-9{fill:#fde1a0;}.cls-10{fill:#62341a;}.cls-11{fill:#060606;}.cls-12{fill:#fffdfd;}.cls-13{fill:#c52d00;}
-		</style>
 	</defs>
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_26" data-name="Layer 26">
@@ -143,3 +140,7 @@
 		</g>
 	</g>
 </svg>
+
+		<style>
+.cls-1{fill:#ff9a0e;}.cls-2{fill:#fc9c0a;}.cls-3{fill:#fee0a4;}.cls-4{fill:#e3500b;}.cls-5{fill:#fb9d00;}.cls-6{fill:#f55605;}.cls-7{fill:#f37000;}.cls-8{fill:#af2e00;}.cls-9{fill:#fde1a0;}.cls-10{fill:#62341a;}.cls-11{fill:#060606;}.cls-12{fill:#fffdfd;}.cls-13{fill:#c52d00;}
+		</style>

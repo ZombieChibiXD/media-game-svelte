@@ -7,11 +7,6 @@
 </script>
 
 <svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 963.32 700.14">
-	<defs>
-		<style>
-.cls-1{fill:#180a0a;}.cls-2{fill:#60352f;}.cls-3{fill:#4a2321;}.cls-4{fill:#75443d;}.cls-5{fill:#462925;}.cls-6{fill:#060503;}.cls-7{fill:#fff;}
-		</style>
-	</defs>
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_11" data-name="Layer 11">
 			<path
@@ -67,3 +62,7 @@
 		</g>
 	</g>
 </svg>
+
+<style>
+.cls-1{fill:#180a0a;}.cls-2{fill:#60352f;}.cls-3{fill:#4a2321;}.cls-4{fill:#75443d;}.cls-5{fill:#462925;}.cls-6{fill:#060503;}.cls-7{fill:#fff;}
+</style>

@@ -9,9 +9,6 @@
 
 <svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 765.72 845.43">
 	<defs>
-		<style>
-.cls-1{fill:#815339;}.cls-2{fill:#58281a;}.cls-3{fill:#d78a32;}.cls-4{fill:#724329;}.cls-5{fill:#612604;}.cls-6{fill:#c17632;}.cls-7{fill:#c17227;}.cls-8{fill:#eca647;}.cls-9{fill:#fcd087;}.cls-10{fill:#2d1912;}.cls-11{fill:#fffefe;}.cls-12{fill:#783b1f;}
-		</style>
 	</defs>
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_22" data-name="Layer 22">
@@ -137,3 +134,7 @@
 		</g>
 	</g>
 </svg>
+
+		<style>
+.cls-1{fill:#815339;}.cls-2{fill:#58281a;}.cls-3{fill:#d78a32;}.cls-4{fill:#724329;}.cls-5{fill:#612604;}.cls-6{fill:#c17632;}.cls-7{fill:#c17227;}.cls-8{fill:#eca647;}.cls-9{fill:#fcd087;}.cls-10{fill:#2d1912;}.cls-11{fill:#fffefe;}.cls-12{fill:#783b1f;}
+		</style>

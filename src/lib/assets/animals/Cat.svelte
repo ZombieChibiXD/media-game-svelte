@@ -32,9 +32,6 @@
 
 <svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 705.69 872.69">
 	<defs>
-		<style>
-.cls-1{fill:#f99120;}.cls-2{fill:#d03928;}.cls-3{fill:#f7b03e;}.cls-4{fill:#f57421;}.cls-5{fill:#ccc;}.cls-6{fill:#f6931e;}.cls-7{fill:#f9911e;}.cls-8{fill:#94080b;}.cls-9{fill:#fed47e;}.cls-10{fill:#b3b3b3;}.cls-11{fill:#f37520;}.cls-12{fill:#060606;}.cls-13{fill:#fffefe;}.cls-14{fill:#d43637;}
-		</style>
 	</defs>
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_13" data-name="Layer 13">
@@ -170,3 +167,7 @@
 		</g>
 	</g>
 </svg>
+
+		<style>
+.cls-1{fill:#f99120;}.cls-2{fill:#d03928;}.cls-3{fill:#f7b03e;}.cls-4{fill:#f57421;}.cls-5{fill:#ccc;}.cls-6{fill:#f6931e;}.cls-7{fill:#f9911e;}.cls-8{fill:#94080b;}.cls-9{fill:#fed47e;}.cls-10{fill:#b3b3b3;}.cls-11{fill:#f37520;}.cls-12{fill:#060606;}.cls-13{fill:#fffefe;}.cls-14{fill:#d43637;}
+		</style>

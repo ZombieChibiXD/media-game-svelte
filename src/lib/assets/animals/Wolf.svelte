@@ -9,9 +9,6 @@
 
 <svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 775.3 987.46">
 	<defs>
-		<style>
-.cls-1{fill:#69686e;}.cls-2{fill:#b3b3b3;}.cls-3{fill:#ece7e3;}.cls-4{fill:#59565d;}.cls-5{fill:#989ca7;}.cls-6{fill:#b7bac1;}.cls-7{fill:#e6e6e6;}.cls-8{fill:gray;}.cls-9{fill:#f3eeea;}.cls-10{fill:#f6ede4;}.cls-11{fill:#83868f;}.cls-12{fill:#f1ece8;}.cls-13{fill:#46434a;}.cls-14{fill:#060606;}.cls-15{fill:#fffdfd;}
-		</style>
 	</defs>
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_44" data-name="Layer 44">
@@ -164,3 +161,7 @@
 		</g>
 	</g>
 </svg>
+
+		<style>
+.cls-1{fill:#69686e;}.cls-2{fill:#b3b3b3;}.cls-3{fill:#ece7e3;}.cls-4{fill:#59565d;}.cls-5{fill:#989ca7;}.cls-6{fill:#b7bac1;}.cls-7{fill:#e6e6e6;}.cls-8{fill:gray;}.cls-9{fill:#f3eeea;}.cls-10{fill:#f6ede4;}.cls-11{fill:#83868f;}.cls-12{fill:#f1ece8;}.cls-13{fill:#46434a;}.cls-14{fill:#060606;}.cls-15{fill:#fffdfd;}
+		</style>

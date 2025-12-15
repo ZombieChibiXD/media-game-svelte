@@ -5,13 +5,8 @@
         ...restProps
     }: AnimalProps = $props();
 </script>
-<svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.23 210.29">
-	<defs>
-		<style>
-.cls-1{fill:#1c2839;}.cls-2{fill:#353c51;}.cls-3{fill:#303d4e;}.cls-4{fill:#484d53;}.cls-5{fill:#3d4e56;}.cls-6{fill:#fff;}
 
-		</style>
-	</defs>
+<svg bind:this={el} {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 385.23 210.29">
 	<g id="Layer_2" data-name="Layer 2">
 		<g id="Layer_4" data-name="Layer 4">
 			<ellipse
@@ -123,3 +118,8 @@
 		</g>
 	</g>
 </svg>
+
+<style>
+.cls-1{fill:#1c2839;}.cls-2{fill:#353c51;}.cls-3{fill:#303d4e;}.cls-4{fill:#484d53;}.cls-5{fill:#3d4e56;}.cls-6{fill:#fff;}
+
+</style>
