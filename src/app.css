@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 @import "tailwindcss";
 
 @import "tw-animate-css";
 
-@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 

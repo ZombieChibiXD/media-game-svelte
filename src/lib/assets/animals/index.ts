@@ -17,7 +17,7 @@ import Duck from "./Duck.svelte";
 import Elephant from "./Elephant.svelte";
 import Fly from "./Fly.svelte";
 import FlyingThermite from "./FlyingThermite.svelte";
-import Girrafe from "./Girrafe.svelte";
+import Giraffe from "./Giraffe.svelte";
 import Goat from "./Goat.svelte";
 import Gorrila from "./Gorrila.svelte";
 import Hedgehog from "./Hedgehog.svelte";
@@ -31,6 +31,7 @@ import Nautilus from "./Nautilus.svelte";
 import Octopus from "./Octopus.svelte";
 import Panda from "./Panda.svelte";
 import Parrot from "./Parrot.svelte";
+import Peacock from "./Peacock.svelte";
 import PrayingMantis from "./PrayingMantis.svelte";
 import Rabbit from "./Rabbit.svelte";
 import SeaHorse from "./SeaHorse.svelte";
@@ -63,7 +64,7 @@ const __animalComponents = {
   Elephant,
   Fly,
   FlyingThermite,
-  Girrafe,
+  Giraffe,
   Goat,
   Gorrila,
   Hedgehog,
@@ -77,6 +78,7 @@ const __animalComponents = {
   Octopus,
   Panda,
   Parrot,
+  Peacock,
   PrayingMantis,
   Rabbit,
   SeaHorse,
@@ -110,7 +112,7 @@ export {
   Elephant,
   Fly,
   FlyingThermite,
-  Girrafe,
+  Giraffe,
   Goat,
   Gorrila,
   Hedgehog,
