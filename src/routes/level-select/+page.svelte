@@ -44,7 +44,21 @@
 				return null;
 		}
 	}}
-></Button>
+	href="/game-1"
+>
+	{#snippet children({ fnAnimateState, buttonState })}
+		<Animal
+			type="Lion"
+			class="p-[0.5cqb] bg-green-200/50 border-8 border-amber-300 aspect-square rounded-full"
+			animate={fnAnimateState(buttonState)}
+		/>
+		<span
+			class="uppercase text-[2.5cqb] font-extrabold font-schoolbell text-black text-center text-wrap text-outlined"
+		>
+			Cocok Nama Hewan
+		</span>
+	{/snippet}
+</Button>
 
 <Button
 	class="top-0 left-[90cqb]"

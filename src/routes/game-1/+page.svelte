@@ -1,0 +1,22 @@
+<script>
+	import { goto } from "$app/navigation";
+	import { cn } from "$lib/utils";
+	import Landing from '../Landing.jpg'
+
+</script>
+
+<img src={Landing} alt="Landing" srcset="" />
+
+<div
+	class={cn(
+		'absolute inset-0 m-auto w-fit h-fit py-2 px-5 flex flex-col',
+		'*:[a]:px-20 *:[a]:py-4 *:[a]:text-2xl *:[a]:uppercase *:[a]:rounded-full',
+		'*:[a]:font-semibold *:[a]:tracking-widest ',
+		'*:[a]:bg-green-600 *:[a]:hover:bg-green-500 *:[a]:active:bg-green-700',
+	)}
+>
+	<a href="/level-select">Play</a>
+</div>
+<button onclick={()=>{ goto('/level-select') }} title="Navigate back" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 left-0 m-[2cqb] p-[2cqb] rounded-lg">
+	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left-icon lucide-arrow-big-left"><path d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/></svg>
+</button>
