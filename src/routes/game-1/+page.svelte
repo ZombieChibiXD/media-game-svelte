@@ -4,7 +4,10 @@
 	import Animal from "$lib/assets/Animal.svelte";
 	import { animalListing, type AnimalItem } from "$lib/animalData";
 	import type { ComponentName } from "$lib/assets/animals";
+	import Landing from '../Landing.jpg'
 
+
+	let dialogEl: HTMLDialogElement | null = null as unknown as HTMLDialogElement
 	type Point = { x: number; y: number };
 	const SNAP_RADIUS_CQW = 4; // snapping in cqw
 
@@ -35,7 +38,7 @@
 	onMount(() => {
 		if (!container) return;
 
-		const picked = shuffle(animalListing).slice(0, 3);
+		const picked = shuffle(animalListing).slice(0, 4);
 		const rightOrder = shuffle(picked.map(a => a.type));
 
 		rows = picked.map(a => ({
@@ -111,6 +114,7 @@
 		// Compute score
 		if (Object.keys(connections).length === rows.length) {
 			score = rows.reduce((s, r) => s + (connections[r.rightType] === r.rightType ? 1 : 0), 0);
+			dialogEl?.showModal();
 		}
 	}
 
@@ -131,10 +135,12 @@
 	Back
 </button>
 
+<img src={Landing} alt="Landing" srcset="" />
+
 <div class="game" bind:this={container}>
 	{#each rows as row}
 		<div class="row">
-			<div class="card left" bind:this={row._leftEl} onpointerdown={(e) => startLine(e, row)}>
+			<div class="card left text-black" bind:this={row._leftEl} onpointerdown={(e) => startLine(e, row)}>
 				{row.name}
 			</div>
 			<div class="card right" bind:this={row._rightEl}>
@@ -160,25 +166,74 @@
 		{/if}
 	</svg>
 
-	{#if score !== null}
-		<div class="score">Score: {score} / {rows.length}</div>
-	{/if}
 </div>
+
+
+
+<dialog
+	bind:this={dialogEl}
+	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[75cqb]"
+>
+	<button
+		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full"
+		type="reset"
+		onclick={() => {
+			dialogEl?.close();
+		}}
+		aria-label="Close modal"
+		autofocus
+	>
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			class="lucide lucide-x-icon lucide-x w-full h-full"
+			><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg
+		>
+	</button>
+	<article class="flex flex-col gap-[3cqb] h-full w-full">
+		<header class="h-[10cqb] rounded-2xl border-2 border-black w-full flex flex-col items-center justify-center text-[3cqb] p-[10cqb]">
+			<span>
+				Hebat!
+			</span>
+			<span>
+				Score: {((score??0) / rows.length)*100}
+			</span>
+		</header>
+		<footer class="flex items-center justify-center gap-[5cqb] *:bg-cyan-300 *:p-[2cqb] *:rounded-2xl *:uppercase font-bold font-schoolbell">
+			<button onclick={()=>goto('/level-select')}>
+				Kembali
+			</button>
+
+			<button onclick={()=>window.location.reload()}>
+				Ulangi
+			</button>
+		</footer>
+	</article>
+</dialog>
 
 <style>
 	.game {
-		position: relative;
+		position: absolute;
 		display: flex;
 		flex-direction: column;
 		gap: 2cqh;
 		padding: 4cqh;
+		inset: 0;
+		margin: auto;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.row {
 		display: grid;
 		grid-template-columns: 12cqw 12cqw;
 		align-items: center;
-		column-gap: 6cqw;
+		column-gap: 10cqw;
 	}
 
 	.card {
