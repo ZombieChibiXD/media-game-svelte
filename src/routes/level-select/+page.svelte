@@ -1,18 +1,38 @@
 <script>
+	import Animal from "$lib/assets/Animal.svelte";
 	import { cn } from "$lib/utils";
-	import Landing from '../Landing.jpg'
+	import Button from "./Button.svelte";
+	import LevelSelect from './LevelSelect.jpg'
 
 </script>
 
-<img src={Landing} alt="Landing" srcset="" />
+<img src={LevelSelect} alt="Level Select BG" srcset="" />
+<Button class="top-[20cqb] left-[5cqb]" animalType="Chicken" fnAnimateState={(buttonState) =>{
+	switch (buttonState) {
+		case 'hover':	return 'walk';
+		default:        return null;
+	}
+}}/>
 
-<div
-	class={cn(
-		'absolute inset-0 m-auto w-fit h-fit py-2 px-5 flex flex-col',
-		'*:[a]:px-20 *:[a]:py-4 *:[a]:text-2xl *:[a]:uppercase *:[a]:rounded-full',
-		'*:[a]:font-semibold *:[a]:tracking-widest ',
-		'*:[a]:bg-green-600 *:[a]:hover:bg-green-500 *:[a]:active:bg-green-700',
-	)}
->
-	<a href="/level-select">Play</a>
-</div>
+<Button class="top-[45cqb] left-[55cqb]" animalType="Chicken" fnAnimateState={(buttonState) =>{
+	switch (buttonState) {
+		case 'hover':	return 'walk';
+		default:        return null;
+	}
+}}/>
+
+<Button class="top-0 left-[90cqb]" animalType="Chicken" fnAnimateState={(buttonState) =>{
+	switch (buttonState) {
+		case 'hover':	return 'walk';
+		default:        return null;
+	}
+}}/>
+
+<Button class="top-[40cqb] left-[145cqb]" animalType="Chicken" fnAnimateState={(buttonState) =>{
+	switch (buttonState) {
+		case 'hover':	return 'walk';
+		default:        return null;
+	}
+}}/>
+
+
