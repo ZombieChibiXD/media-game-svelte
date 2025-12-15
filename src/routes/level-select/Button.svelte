@@ -2,22 +2,24 @@
 	import Animal from "$lib/assets/Animal.svelte";
 	import type { ComponentName } from "$lib/assets/animals";
 	import type { AnimalProps } from "$lib/assets/animals/type";
-	import { cn } from "$lib/utils";
+	import { cn, type WithoutChildren } from "$lib/utils";
+	import type { Snippet } from "svelte";
     import type { HTMLAnchorAttributes } from 'svelte/elements'
     type Prop = {
         buttonState?: null | 'hover' | 'click';
-        fnAnimateState?: (buttonState: undefined | null | 'hover' | 'click') => AnimalProps['animate'];
-        animalType: ComponentName,
-    } & HTMLAnchorAttributes
+        fnAnimateState: (buttonState: undefined | null | 'hover' | 'click') => AnimalProps['animate'];
+	} &  WithoutChildren<HTMLAnchorAttributes>
     let {
         buttonState = $bindable(),
-        animalType: type,
         fnAnimateState = (buttonState) =>{
             return null;
         },
         class: className,
+        children,
         ...restProps
-    }: Prop = $props();
+    }: Prop & {
+		children?: Snippet<[{fnAnimateState: Prop["fnAnimateState"], buttonState: Prop["buttonState"]}]>
+	} = $props();
 
 </script>
 
@@ -28,13 +30,11 @@
 	onpointerleave={() => {
 		buttonState = null;
 	}}
-    {...restProps}
-	class={cn("absolute inset-0 w-[20cqb] h-auto aspect-square bg-red-500 rounded-lg py-[1cqb] px-[1cqb] flex flex-col justify-center items-center", className)}
+	{...restProps}
+	class={cn(
+		'absolute inset-0 w-[20cqb] h-auto aspect-square cursor-pointer rounded-lg py-[1cqb] px-[1cqb] flex flex-col justify-center items-center',
+		className
+	)}
 >
-	<Animal
-		{type}
-		class="p-[0.5cqb] bg-purple-500 aspect-square rounded-full"
-		animate={fnAnimateState(buttonState)}
-	/>
-	<span class="uppercase text-[2cqb] font-semibold text-black text-center text-wrap"> Ensiklopedia Satwa </span>
+{@render children?.({fnAnimateState, buttonState})}
 </a>
