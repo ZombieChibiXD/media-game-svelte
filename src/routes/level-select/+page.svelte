@@ -17,6 +17,7 @@
 				return null;
 		}
 	}}
+	href="/encyclopedia"
 >
 	{#snippet children({ fnAnimateState, buttonState })}
 		<Animal

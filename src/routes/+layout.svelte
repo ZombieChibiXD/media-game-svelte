@@ -55,7 +55,7 @@
 		<p>Rotate your device</p>
 	</div>
 {:else}
-	<div class="viewpot bg-black flex items-center justify-center w-screen h-screen" bind:this={viewport}>
+	<div class="viewport bg-black flex items-center justify-center w-screen h-screen" bind:this={viewport}>
     <div class="game-container">
       <div class="game border border-white text-white relative overflow-hidden" bind:clientWidth={layoutWidth} bind:clientHeight={layoutHeight} style="--view-width: {layoutWidth}px; --view-height: {layoutHeight}px">
         {@render children()}
