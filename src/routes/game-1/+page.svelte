@@ -110,7 +110,7 @@
 
 		// Compute score
 		if (Object.keys(connections).length === rows.length) {
-			score = rows.reduce((s, r) => s + (connections[r.type] === r.rightType ? 1 : 0), 0);
+			score = rows.reduce((s, r) => s + (connections[r.rightType] === r.rightType ? 1 : 0), 0);
 		}
 	}
 
