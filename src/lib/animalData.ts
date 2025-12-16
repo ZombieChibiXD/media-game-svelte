@@ -14,7 +14,7 @@ export const animalListing: AnimalItem[] = [
         type: 'Bat',
         x: 300,
         y: 20,
-        width: 10,
+        width: 14,
         name: 'Kelelawar',
         description: `Kelelawar adalah hewan yang aktif pada malam hari. Mereka bisa terbang menggunakan sayap tipis yang terbuat dari kulit. Kelelawar sering tidur dengan posisi terbalik di gua atau pohon.
 
@@ -41,9 +41,9 @@ Aku hidup bersama dalam sarang`
 
     {
         type: 'Beetle',
-        x: 210,
-        y: 6,
-        width: 8,
+        x: 212,
+        y: 2,
+        width: 10,
         name: 'Kumbang',
         description: `Kumbang adalah serangga kecil dengan tubuh keras dan mengkilap. Mereka sering ditemukan di tanah, daun, atau kayu.
 
@@ -56,7 +56,7 @@ Aku sering ditemukan di tanah atau kayu`
     {
         type: 'Butterfly',
         x: 180,
-        y: 10,
+        y: 12,
         width: 10,
         name: 'Kupu-kupu',
         description: `Kupu-kupu adalah serangga cantik dengan sayap berwarna-warni. Mereka terbang pelan dan sering hinggap di bunga.
@@ -112,7 +112,7 @@ Aku hidup di padang rumput`
     },
     {
         type: 'Crab',
-        x: 100,
+        x: 120,
         y: 5,
         width: 10,
         name: 'Kepiting',
@@ -142,7 +142,7 @@ Aku punya tanduk (jika jantan)`
         type: 'Dog',
         x: 150,
         y: 45,
-        width: 12,
+        width: 10,
         name: 'Anjing',
         description: `Anjing adalah sahabat manusia yang setia. Mereka suka bermain, berlari, dan menemani pemiliknya.
 
@@ -226,7 +226,7 @@ Aku hidup bersama keluarga`
         type: 'Fly',
         x: 220,
         y: 6,
-        width: 8,
+        width: 10,
         name: 'Lalat',
         description: `Lalat adalah serangga kecil yang sering kita lihat di sekitar rumah. Mereka terbang dengan sangat cepat.
 
@@ -241,7 +241,7 @@ Aku sering ada di sekitar rumah`
         type: 'FlyingThermite',
         x: 190,
         y: 6,
-        width: 8,
+        width: 10,
         name: 'Rayap Terbang',
         description: `Rayap terbang adalah serangga kecil yang keluar saat musim hujan. Mereka terbang bersama-sama dalam jumlah besar.
 
@@ -267,8 +267,8 @@ Aku hidup di padang rumput Afrika`
     },
     {
         type: 'Goat',
-        x: 310,
-        y: 26,
+        x: 265,
+        y: 10,
         width: 14,
         name: 'Kambing',
         description: `Kambing adalah hewan ternak yang suka memanjat dan melompat. Mereka memakan rumput dan daun.
@@ -366,9 +366,9 @@ Aku tidak berbahaya`
 
     {
         type: 'Mosquitto',
-        x: 170,
+        x: 165,
         y: 4,
-        width: 6,
+        width: 10,
         name: 'Nyamuk',
         description: `Nyamuk adalah serangga kecil yang terbang dan berdengung. Beberapa nyamuk menggigit manusia.
 
@@ -394,7 +394,7 @@ Sayapku berwarna lembut`
     },
     {
         type: 'Nautilus',
-        x: 100,
+        x: 120,
         y: 50,
         width: 10,
         name: 'Nautilus',
@@ -438,7 +438,7 @@ Aku hidup di hutan bambu`
         type: 'Parrot',
         x: 300,
         y: 5,
-        width: 12,
+        width: 14,
         name: 'Burung Beo',
         description: `Burung beo adalah burung berwarna cerah. Mereka bisa meniru suara manusia.
 
@@ -464,9 +464,9 @@ Aku menarik perhatian betina dengan ekor`
     },
     {
         type: 'PrayingMantis',
-        x: 210,
+        x: 212,
         y: 15,
-        width:7,
+        width:12,
         name: 'Belalang Sembah',
         description: `Belalang sembah adalah serangga dengan posisi tangan seperti sedang berdoa. Mereka sering diam menunggu mangsa.
 
@@ -562,9 +562,9 @@ Aku bisa menyemprot tinta untuk melindungi diri`
     },
     {
         type: 'Starfish',
-        x: 100,
+        x: 120,
         y: 70,
-        width: 12,
+        width: 10,
         name: 'Bintang Laut',
         description: `Bintang laut adalah hewan laut berbentuk bintang. Mereka hidup di dasar laut.
 
@@ -578,7 +578,7 @@ Aku bisa menumbuhkan kembali lengan`
         type: 'Tiger',
         x: 270,
         y: 34,
-        width: 12,
+        width: 10,
         name: 'Harimau',
         description: `Harimau adalah kucing besar dengan garis hitam dan oranye. Setiap harimau memiliki pola garis yang berbeda.
 
@@ -590,7 +590,7 @@ Aku menjaga wilayahku`
     },
     {
         type: 'Tortoise',
-        x: 110,
+        x: 112,
         y: 28,
         width: 16,
         name: 'Kura-kura Darat',
@@ -618,9 +618,9 @@ Aku membuat sarang dari kertas`
     },
     {
         type: 'Wolf',
-        x: 300,
-        y: 35,
-        width: 12,
+        x: 265,
+        y: 65,
+        width: 16,
         name: 'Serigala',
         description: `Serigala adalah hewan mirip anjing yang hidup di alam liar. Mereka terkenal dengan suara aumannya.
 
@@ -634,7 +634,7 @@ Aku terkenal dengan aumanku`
         type: 'Zebra',
         x: 215,
         y: 45,
-        width: 12,
+        width: 10,
         name: 'Zebra',
         description: `Zebra adalah hewan yang mirip kuda dengan garis hitam putih. Garis ini membantu zebra saling mengenali.
 
