@@ -1,8 +1,11 @@
 <script lang="ts">
 	import '../app.css';
-  import { afterNavigate, goto, onNavigate } from '$app/navigation';
-	import { onMount } from "svelte";
+	import { afterNavigate, goto, onNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
+	import LandingImg from './Landing.jpg';
+	import LevelSelectImg from './level-select/LevelSelect.jpg';
+	import EncyclopediaImg from './encyclopedia/Encyclopedia.jpg';
 
 	let { children } = $props();
 
@@ -49,6 +52,12 @@
     }
   })
 </script>
+
+<svelte:head>
+	<link rel="preload" as="image" href={LandingImg} />
+	<link rel="prefetch" as="image" href={LevelSelectImg} />
+	<link rel="prefetch" as="image" href={EncyclopediaImg} />
+</svelte:head>
 
 {#if !isLandscape}
 	<div class="rotate-overlay">
