@@ -1,9 +1,8 @@
 import { defineMeta } from '@storybook/addon-svelte-csf';
 import Control from './Control.svelte';
-import type { Meta, StoryObj } from '@storybook/svelte';
 import { ComponentNames } from './controls';
 
-const meta: Meta<Control> = {
+const meta = defineMeta({
 	title: 'Assets/Control',
 	component: Control,
 	argTypes: {
@@ -12,18 +11,17 @@ const meta: Meta<Control> = {
 			options: ComponentNames
 		}
 	}
-};
+});
 
 export default meta;
-type Story = StoryObj<typeof Control>;
 
-export const Default: Story = {
+export const Default = {
 	args: {
 		type: undefined
 	}
 };
 
-export const Play: Story = {
+export const Play = {
 	args: {
 		type: 'Play'
 	}

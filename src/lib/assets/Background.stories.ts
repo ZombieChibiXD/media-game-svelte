@@ -1,29 +1,27 @@
 import { defineMeta } from '@storybook/addon-svelte-csf';
 import Background from './Background.svelte';
-import type { Meta, StoryObj } from '@storybook/svelte';
-import { ComponentNames } from './animals';
+import { ComponentNames } from './backgrounds';
 
-const meta: Meta<Background> = {
+const meta = defineMeta({
 	title: 'Assets/Background',
 	component: Background,
 	argTypes: {
 		type: {
 			control: 'select',
 			options: ComponentNames
-		},
+		}
 	}
-};
+});
 
 export default meta;
-type Story = StoryObj<typeof Background>;
 
-export const Default: Story = {
+export const Default = {
 	args: {
 		type: undefined
 	}
 };
 
-export const Loading: Story = {
+export const Loading = {
 	args: {
 		type: 'Loading'
 	}

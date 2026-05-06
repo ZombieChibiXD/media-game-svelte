@@ -74,7 +74,7 @@
 <style>
   :root {
     --view-width: 0px;
-    --vew-height: 0px;
+    --view-height: 0px;
   }
   .game-container {
     container-type: size;

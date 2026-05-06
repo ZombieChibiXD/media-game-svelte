@@ -1,14 +1,5 @@
 <script lang="ts">
-  interface Props {
-    /** The onclick event handler */
-    // onclick?: () => void;
-    /** Whether to animate the loading component */
-    animate?: boolean;
-  }
-
-  export let animate: Props['animate'] = false;
+	let { animate = false }: { animate?: boolean } = $props();
 </script>
 
-<div>
-  Score
-</div>
+<div>Score</div>

@@ -128,7 +128,9 @@
 		<div class="basis-3/5 relative font-semibold font-schoolbell text-center">
 			<div class="absolute inset-0">
 				<ScrollArea class="h-full w-full p-[2cqb]">
-					{@html selectedDescription.replaceAll('\n', '<br>\n')}
+					{#each selectedDescription.split('\n') as line}
+						{line}<br />
+					{/each}
 				</ScrollArea>
 			</div>
 		</div>
