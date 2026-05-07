@@ -1,6 +1,6 @@
 <script>
 	import { cn } from "$lib/utils";
-	import Landing from './Landing.jpg'
+	import Landing from '$lib/Landing.jpg'
 
 </script>
 <img src={Landing} alt="Landing" srcset="">

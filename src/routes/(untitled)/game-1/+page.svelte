@@ -1,6 +1,6 @@
 <script lang="ts">
 	import MatchGame from '$lib/scenes/MatchGame.svelte';
-	import Landing from '../Landing.jpg';
+	import Landing from '$lib/Landing.jpg';
 </script>
 
 <MatchGame landingImage={Landing}>

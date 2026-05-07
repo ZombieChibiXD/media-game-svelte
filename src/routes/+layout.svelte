@@ -3,7 +3,7 @@
 	import { afterNavigate, goto, onNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
 
-	import LandingImg from './Landing.jpg';
+	import LandingImg from '$lib/Landing.jpg';
 	import LevelSelectImg from './(untitled)/level-select/LevelSelect.jpg';
 	import EncyclopediaImg from './(untitled)/encyclopedia/Encyclopedia.jpg';
 
