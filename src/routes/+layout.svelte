@@ -4,8 +4,8 @@
 	import { onMount } from 'svelte';
 
 	import LandingImg from './Landing.jpg';
-	import LevelSelectImg from './level-select/LevelSelect.jpg';
-	import EncyclopediaImg from './encyclopedia/Encyclopedia.jpg';
+	import LevelSelectImg from './(untitled)/level-select/LevelSelect.jpg';
+	import EncyclopediaImg from './(untitled)/encyclopedia/Encyclopedia.jpg';
 
 	let { children } = $props();
 
