@@ -55,7 +55,7 @@
 		<span
 			class="uppercase text-[2.5cqb] font-extrabold font-schoolbell text-black text-center text-wrap text-outlined"
 		>
-			Cocok Nama Hewan
+			Mencocokan Nama Hewan
 		</span>
 	{/snippet}
 </Button>
@@ -82,7 +82,7 @@
 		<span
 			class="uppercase text-[2.5cqb] font-extrabold font-schoolbell text-black text-center text-wrap text-outlined"
 		>
-			Cocok Awak Hewan
+			Mencocokan badan hewan
 		</span>
 	{/snippet}
 </Button>
