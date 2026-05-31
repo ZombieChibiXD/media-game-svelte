@@ -256,7 +256,7 @@
 <button
 	onclick={() => goto('/level-select')}
 	class="absolute top-[2cqb] left-[2cqb] p-[1.5cqb] bg-gray-300/80 rounded-lg z-10"
-	title="Go back to level select"
+	title="Kembali ke pilih level"
 >
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/></svg>
 </button>
@@ -320,7 +320,7 @@
 		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full"
 		type="reset"
 		onclick={() => dialogEl?.close()}
-		aria-label="Close modal"
+		aria-label="Tutup"
 		autofocus
 	>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-full h-full"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
@@ -328,7 +328,7 @@
 	<article class="flex flex-col gap-[3cqb] h-full w-full">
 		<header class="h-[10cqb] rounded-2xl border-2 border-black w-full flex flex-col items-center justify-center text-[3cqb] p-[10cqb]">
 			<span>Hebat!</span>
-			<span>Score: {((score ?? 0) / rows.length) * 100}</span>
+			<span>Skor: {((score ?? 0) / rows.length) * 100}</span>
 		</header>
 		<footer class="flex items-center justify-center gap-[5cqb] *:bg-cyan-300 *:p-[2cqb] *:rounded-2xl *:uppercase font-bold font-schoolbell">
 			<button onclick={() => goto('/level-select')}> Kembali </button>

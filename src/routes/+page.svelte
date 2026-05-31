@@ -3,7 +3,7 @@
 	import Landing from '$lib/Landing.jpg'
 
 </script>
-<img src={Landing} alt="Landing" srcset="">
+<img src={Landing} alt="Halaman Utama" srcset="">
 <a
     href="/loading"
 	class={cn(
@@ -17,7 +17,7 @@
 		`active:-translate-y-2 active:shadow-[0_3px_0_#3730a3]`,
 		`transition-all duration-150`
 	)}
-	title="Play game"
+	title="Mainkan"
 >
 	<svg
 		xmlns="http://www.w3.org/2000/svg"

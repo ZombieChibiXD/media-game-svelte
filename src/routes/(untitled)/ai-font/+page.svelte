@@ -7,33 +7,33 @@
 </script>
 
 <div class="page">
-	<h1>AI Font — SvelteKit Render</h1>
-	<p>Type text below to render it with the multi-layered AI-generated font.</p>
+	<h1>AI Font — Render SvelteKit</h1>
+	<p>Ketik teks di bawah untuk merender dengan font berlapis buatan AI.</p>
 
-	<input type="text" bind:value={input} placeholder="Type text..." class="input" maxlength={20} />
+	<input type="text" bind:value={input} placeholder="Ketik teks..." class="input" maxlength={20} />
 
 	<div class="controls">
 		<label class="range-label">
-			Scale: {scale}x
+			Skala: {scale}x
 			<input type="range" bind:value={scale} min={0.3} max={3} step={0.1} />
 		</label>
 		<label class="range-label">
-			Gap: {gap}px
+			Jarak: {gap}px
 			<input type="range" bind:value={gap} min={2} max={40} step={1} />
 		</label>
 	</div>
 
 	<div class="preview">
-		<AIFont text={input || 'TYPE'} {scale} {gap} />
+		<AIFont text={input || 'KETIK'} {scale} {gap} />
 	</div>
 
 	<div class="info">
-		<h3>Layers:</h3>
+		<h3>Lapisan:</h3>
 		<div class="layers">
-			<span class="swatch o"></span> Outline (gold→red)
-			<span class="swatch io"></span> Inner Outline (orange→brown)
-			<span class="swatch s"></span> Shade (green)
-			<span class="swatch f"></span> Fill (dark base)
+			<span class="swatch o"></span> Garis Luar (emas→merah)
+			<span class="swatch io"></span> Garis Dalam (oranye→cokelat)
+			<span class="swatch s"></span> Bayangan (hijau)
+			<span class="swatch f"></span> Isian (dasar gelap)
 		</div>
 	</div>
 </div>

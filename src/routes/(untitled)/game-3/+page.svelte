@@ -66,7 +66,7 @@
 		<img
 			src={Encyclopedia}
 			class="h-full select-none w-auto pointer-events-none object-cover"
-			alt="Level Select BG"
+			alt="Latar Pilih Level"
 			srcset=""
 		/>
 		{#each animalListing.sort((a, b) => a.x - b.x) as { type, x, y, width, name, description }}
@@ -101,7 +101,7 @@
 		onclick={() => {
 			dialogEl?.close();
 		}}
-		aria-label="Close modal"
+		aria-label="Tutup"
 		autofocus
 	>
 		<svg
@@ -143,7 +143,7 @@
 		onclick={() => {
 			dialogSuccessEl?.close();
 		}}
-		aria-label="Close modal"
+		aria-label="Tutup"
 		autofocus
 	>
 		<svg
@@ -164,7 +164,7 @@
 				Hebat!
 			</span>
 			<span>
-				Score: 100
+				Skor: 100
 			</span>
 		</header>
 		<footer class="flex items-center justify-center gap-[5cqb] *:bg-cyan-300 *:p-[2cqb] *:rounded-2xl *:uppercase font-bold font-schoolbell">
@@ -180,12 +180,12 @@
 </dialog>
 
 
-<button onclick={()=>{ dialogEl?.showModal()  }} title="Navigate back" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 right-0 m-[2cqb] p-[2cqb] rounded-lg">
+<button onclick={()=>{ dialogEl?.showModal()  }} title="Bantuan" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 right-0 m-[2cqb] p-[2cqb] rounded-lg">
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-question-mark-icon lucide-circle-question-mark"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
 </button>
 
 
-<button onclick={()=>{ goto('/level-select') }} title="Navigate back" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 left-0 m-[2cqb] p-[2cqb] rounded-lg">
+<button onclick={()=>{ goto('/level-select') }} title="Kembali" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 left-0 m-[2cqb] p-[2cqb] rounded-lg">
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left-icon lucide-arrow-big-left"><path d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/></svg>
 </button>
 

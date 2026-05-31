@@ -99,7 +99,7 @@
 		{/each}
 	</svg>
 {:else}
-	<div class="placeholder">Loading...</div>
+	<div class="placeholder">Memuat...</div>
 {/if}
 
 <style>

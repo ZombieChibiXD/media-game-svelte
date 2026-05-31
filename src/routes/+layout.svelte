@@ -82,7 +82,7 @@
 
 {#if !isLandscape}
 	<div class="rotate-overlay">
-		<p>Rotate your device</p>
+		<p>Putar perangkat Anda</p>
 	</div>
 {:else}
 	<div class="viewport bg-black flex items-center justify-center w-screen h-screen" bind:this={viewport}>
@@ -96,11 +96,11 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg>
           {/if}
         </button>
-        <button onclick={toggleMusic} class="active:bg-gray-500 transition-all duration-300 cursor-pointer absolute bottom-0 left-0 m-[2cqb] rounded-lg" title={musicOn ? 'Mute music' : 'Play music'}>
+        <button onclick={toggleMusic} class="active:bg-gray-500 transition-all duration-300 cursor-pointer absolute bottom-0 left-0 m-[2cqb] rounded-lg" title={musicOn ? 'Matikan musik' : 'Nyalakan musik'}>
           {#if musicOn}
-          <object data="/Unmute.svg" type="image/svg+xml" class="w-[6cqb] h-[6cqb] pointer-events-none">Unmute</object>
+          <object data="/Unmute.svg" type="image/svg+xml" class="w-[6cqb] h-[6cqb] pointer-events-none">Suarakan</object>
           {:else}
-          <object data="/mute.svg" type="image/svg+xml" class="w-[6cqb] h-[6cqb] pointer-events-none">Mute</object>
+          <object data="/mute.svg" type="image/svg+xml" class="w-[6cqb] h-[6cqb] pointer-events-none">Diamkan</object>
           {/if}
         </button>
       </div>

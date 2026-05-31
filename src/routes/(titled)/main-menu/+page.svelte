@@ -9,7 +9,7 @@
 
 </script>
 
-<img src={Landing} alt="Landing" srcset="" />
+<img src={Landing} alt="Halaman Utama" srcset="" />
 
 <div
 	class={cn(
@@ -27,6 +27,6 @@
 		onmouseenter={() => (playHover = true)}
 		onmouseleave={() => (playHover = false)}
 	>
-		<img src={playHover ? '/play_hover.svg' : '/play.svg'} alt="Play" class="w-64 h-auto" />
+		<img src={playHover ? '/play_hover.svg' : '/play.svg'} alt="Main" class="w-64 h-auto" />
 	</a>
 </div>

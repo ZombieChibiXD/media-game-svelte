@@ -8,5 +8,5 @@
 </script>
 
 <div>
-  Main Menu
+  Menu Utama
 </div>

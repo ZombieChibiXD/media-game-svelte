@@ -10,5 +10,5 @@
 </script>
 
 <div>
-    Level Select
+    Pilih Level
 </div>
