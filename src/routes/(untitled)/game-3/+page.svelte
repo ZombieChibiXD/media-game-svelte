@@ -5,6 +5,7 @@
 	import type { ComponentName } from "$lib/assets/animals";
 	import BackButton from "$lib/components/BackButton.svelte";
 	import { ScrollArea } from "$lib/components/ui/scroll-area/index.js";
+	import XIcon from "$lib/components/XIcon.svelte";
 
 	import { cn } from "$lib/utils";
 	import type { PageProps } from "./$types";
@@ -97,7 +98,7 @@
 	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[100cqb]"
 >
 	<button
-		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full"
+		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
 		type="reset"
 		onclick={() => {
 			dialogEl?.close();
@@ -105,17 +106,8 @@
 		aria-label="Tutup"
 		autofocus
 	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="lucide lucide-x-icon lucide-x w-full h-full"
-			><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg
-		>
+		<XIcon />
+
 	</button>
 	<article class="flex gap-[3cqb] h-full w-full">
 		<aside class="basis-2/5">
@@ -139,7 +131,7 @@
 	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[75cqb]"
 >
 	<button
-		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full"
+		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
 		type="reset"
 		onclick={() => {
 			dialogSuccessEl?.close();
@@ -147,17 +139,7 @@
 		aria-label="Tutup"
 		autofocus
 	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="lucide lucide-x-icon lucide-x w-full h-full"
-			><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg
-		>
+		<XIcon />
 	</button>
 	<article class="flex flex-col gap-[3cqb] h-full w-full">
 		<header class="h-[10cqb] rounded-2xl border-2 border-black w-full flex flex-col items-center justify-center text-[3cqb] p-[10cqb]">
