@@ -32,8 +32,8 @@
       <stop style="stop-color:#e7b987;stop-opacity:0" offset="1" />
     </linearGradient>
     <linearGradient id="linearGradient2">
-      <stop style="stop-color:#afd470;stop-opacity:1" offset="0" />
-      <stop style="stop-color:#4b8746;stop-opacity:1" offset="1" />
+      <stop style="stop-color:#4b8746;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#afd470;stop-opacity:1" offset="1" />
     </linearGradient>
     <linearGradient
        id="linearGradient15"
@@ -66,8 +66,8 @@
        gradientTransform="matrix(-0.0030348,-49.778055,49.778055,-0.0030348,516.16417,286.32256)"
        spreadMethod="pad"
     >
-      <stop style="stop-color:#c8df85;stop-opacity:1" offset="0" />
-      <stop style="stop-color:#4e8f46;stop-opacity:1" offset="1" />
+      <stop style="stop-color:#4e8f46;stop-opacity:1" offset="0" />
+      <stop style="stop-color:#c8df85;stop-opacity:1" offset="1" />
     </linearGradient>
     <linearGradient
        id="linearGradient3"
@@ -103,7 +103,7 @@
        d="m 520.6388,218.87481 c -25.47214,0.0493 -46.08554,20.73096 -46.05274,46.20312 2.57287,35.31472 12.45154,0.32359 46.13282,1.2754 0.003,1.4e-4 0.007,-1.6e-4 0.01,0 0.003,-1.6e-4 0.007,1.4e-4 0.01,0 33.68138,-0.95181 43.55993,34.03932 46.13281,-1.2754 0.0328,-25.47216 -20.58052,-46.15382 -46.05274,-46.20312 -0.0296,-6e-5 -0.0602,0 -0.0898,0 -0.0296,0 -0.0602,-6e-5 -0.0898,0 z" />
     <path
        d="m 529.60366,296.40042 c 8.26,-0.032 10.332,-9.336 10.332,-31.67733 v 0 c 0,-19.756 -1.564,-32.67867 -11.38133,-30.91867 v 0 c -25.088,4.5 -36.16533,24.85067 -36.16533,31.76534 v 0 c 0,12.80133 22.58533,30.83066 37.14799,30.83066 v 0 c 0.0227,0 0.044,0 0.0667,0"
-       style="display:inline;fill:url(#linearGradient22);stroke:url(#linearGradient3);stroke-width:2.333;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+       style="display:inline;fill:url(#linearGradient22);stroke:url(#linearGradient3);stroke-width:5px;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
 </svg>
 <span class="pt-2">
