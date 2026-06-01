@@ -13,8 +13,8 @@
 	class="top-[20cqb] left-[5cqb]"
 	fnAnimateState={(buttonState) => {
 		switch (buttonState) {
-			case 'hover':
-				return 'walk';
+			// case 'hover':
+			// 	return 'walk';
 			default:
 				return null;
 		}
