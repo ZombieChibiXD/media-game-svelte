@@ -1,6 +1,6 @@
 <script>
 	import { cn } from "$lib/utils";
-	import Landing from '$lib/Landing.jpg'
+	import Landing from '$lib/Landing.webp'
 
 </script>
 <img src={Landing} alt="Halaman Utama" srcset="">

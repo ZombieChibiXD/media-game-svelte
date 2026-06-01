@@ -3,7 +3,7 @@
 	import { afterNavigate, goto, onNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';
 
-	import LandingImg from '$lib/Landing.jpg';
+	import LandingImg from '$lib/Landing.webp';
 	import LevelSelectImg from './(untitled)/level-select/LevelSelect.jpg';
 	import EncyclopediaImg from './(untitled)/encyclopedia/Encyclopedia.jpg';
 
@@ -78,6 +78,8 @@
 	<link rel="preload" as="image" href={LandingImg} />
 	<link rel="prefetch" as="image" href={LevelSelectImg} />
 	<link rel="prefetch" as="image" href={EncyclopediaImg} />
+  <!-- Prefetch font svg -->
+  <link rel="prefetch" as="image" href="/fonts/SortedAIFont.svg" />
 </svelte:head>
 
 {#if !isLandscape}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Animal from '$lib/assets/Animal.svelte';
 	import MatchGame from '$lib/scenes/MatchGame.svelte';
-	import Landing from '$lib/Landing.jpg';
+	import Landing from '$lib/Landing.webp';
 </script>
 
 <MatchGame landingImage={Landing}>
