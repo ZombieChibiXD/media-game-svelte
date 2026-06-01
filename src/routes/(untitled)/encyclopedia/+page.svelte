@@ -110,7 +110,7 @@
 	<article class="flex gap-[3cqb] h-full w-full">
 		<aside class="basis-2/5">
 			<Animal type={selectedAnimal} animate="walk" />
-			<audio autoplay controls src="/audios/{selectedAnimal}.mp3"></audio>
+			<audio autoplay controls src="/audios/tts/{selectedAnimal}.mp3"></audio>
 			<p
 				class=" bg-gray-500 text-center font-semibold font-schoolbell mt-[1cqb] rounded-full p-[1cqb]"
 			>
