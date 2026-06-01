@@ -106,5 +106,5 @@
 	.ai-font { display: block; overflow: visible; }
 	.source { position: absolute; opacity: 0; width: 1px; height: 1px; overflow: hidden; pointer-events: none; }
 	.measure { position: absolute; opacity: 0; width: 1px; height: 1px; overflow: hidden; pointer-events: none; }
-	.placeholder { display: flex; align-items: center; justify-content: center; color: #666; height: 200px; font-family: monospace; }
+	.placeholder { display: flex; align-items: center; justify-content: center; color: #666; font-family: monospace; }
 </style>
