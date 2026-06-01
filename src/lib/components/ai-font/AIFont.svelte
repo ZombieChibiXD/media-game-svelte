@@ -16,7 +16,7 @@
 	const ALL_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 	onMount(async () => {
-		const res = await fetch('/fonts/SortedAIFont.svg');
+		const res = await fetch('/fonts/RefactoredFont.svg');
 		svgContent = await res.text();
 		await new Promise(r => setTimeout(r, 400));
 		if (!measureEl) return;
@@ -71,7 +71,7 @@
 <!-- Hidden measurement: uses the inlined SVG as source, renders each letter via <use> -->
 <svg bind:this={measureEl} class="measure">
 	{#each ALL_CHARS as c}
-		<g data-char={c}><use href={'#' + c + ' G'} /></g>
+		<g data-char={c}><use href={'#' + c + '_G'} /></g>
 	{/each}
 </svg>
 
@@ -91,7 +91,7 @@
 			{@const p = positions[i]}
 			{#if !item.space}
 				<use
-					href={'#' + item.c + ' G'}
+					href={'#' + item.c + '_G'}
 					x={p.x - item.bb.x}
 					y={-item.bb.y}
 				/>
