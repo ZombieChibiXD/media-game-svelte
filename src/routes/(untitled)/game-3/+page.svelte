@@ -98,7 +98,7 @@
 	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[100cqb]"
 >
 	<button
-		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
+		class="absolute top-[1cqb] right-[1cqb] text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
 		type="reset"
 		onclick={() => {
 			dialogEl?.close();
@@ -131,7 +131,7 @@
 	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[75cqb]"
 >
 	<button
-		class="absolute top-[1cqb] right-[1cqb] bg-red-500 text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
+		class="absolute top-[1cqb] right-[1cqb] text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
 		type="reset"
 		onclick={() => {
 			dialogSuccessEl?.close();
