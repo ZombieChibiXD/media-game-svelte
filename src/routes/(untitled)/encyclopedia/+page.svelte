@@ -8,7 +8,7 @@
 
 	import { cn } from "$lib/utils";
 	import Button from "./Button.svelte";
-	import Encyclopedia from './Encyclopedia.jpg'
+	import Encyclopedia from './Encyclopedia.webp'
 	import { onMount } from "svelte";
 
 

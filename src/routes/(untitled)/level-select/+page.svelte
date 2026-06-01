@@ -4,7 +4,7 @@
 	import BackButton from "$lib/components/BackButton.svelte";
 	import { cn } from "$lib/utils";
 	import Button from "./Button.svelte";
-	import LevelSelect from './LevelSelect.jpg'
+	import LevelSelect from './LevelSelect.webp'
 
 </script>
 
