@@ -10,7 +10,7 @@
 	import { cn } from "$lib/utils";
 	import type { PageProps } from "./$types";
 	import Button from "./Button.svelte";
-	import Encyclopedia from './Encyclopedia.webp'
+	import Encyclopedia from '../encyclopedia/Encyclopedia.webp'
 	import { onMount } from "svelte";
 
 
