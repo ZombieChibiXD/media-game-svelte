@@ -1,6 +1,7 @@
 <script>
 	import { goto } from "$app/navigation";
 	import Animal from "$lib/assets/Animal.svelte";
+	import BackButton from "$lib/components/BackButton.svelte";
 	import { cn } from "$lib/utils";
 	import Button from "./Button.svelte";
 	import LevelSelect from './LevelSelect.jpg'
@@ -116,9 +117,8 @@
 </Button>
 
 
-<button onclick={()=>{ goto('/main-menu') }} title="Kembali" class="bg-gray-300/80 hover:bg-gray-300/90 active:bg-black transition-all duration-300 cursor-pointer absolute top-0 left-0 m-[2cqb] p-[2cqb] rounded-lg">
-	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-big-left-icon lucide-arrow-big-left"><path d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/></svg>
-	</button>
+<BackButton onclick={()=>{ goto('/main-menu') }} />
+
 <style>
 	.text-outlined {
 		--thickness: 0.35cqb;

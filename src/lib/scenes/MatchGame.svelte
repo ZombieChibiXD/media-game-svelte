@@ -5,6 +5,7 @@
 	import { animalListing, type AnimalItem } from '$lib/animalData';
 	import type { ComponentName } from '$lib/assets/animals';
 	import type { Snippet } from 'svelte';
+	import BackButton from '$lib/components/BackButton.svelte';
 
 	type Point = { x: number; y: number };
 	type Side = 'left' | 'right';
@@ -252,14 +253,7 @@
 		return { x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y };
 	}
 </script>
-
-<button
-	onclick={() => goto('/level-select')}
-	class="absolute top-[2cqb] left-[2cqb] p-[1.5cqb] bg-gray-300/80 rounded-lg z-10"
-	title="Kembali ke pilih level"
->
-	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 9a1 1 0 0 1-1-1V5.061a1 1 0 0 0-1.811-.75l-6.835 6.836a1.207 1.207 0 0 0 0 1.707l6.835 6.835a1 1 0 0 0 1.811-.75V16a1 1 0 0 1 1-1h6a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1z"/></svg>
-</button>
+<BackButton onclick={()=>{ goto('/level-select') }} title="Kembali ke pilih level" />
 
 <img src={landingImage} alt="" />
 
