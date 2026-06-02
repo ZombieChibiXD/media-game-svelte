@@ -1,4 +1,8 @@
 <script>
+	// Halaman pemilihan level — menampilkan 4 pilihan permainan.
+	// Pilihan: Ensiklopedia Satwa, Mencocokan Nama Hewan, Mencocokan Badan Hewan, Cari Hewan.
+	// Setiap pilihan memiliki ikon hewan (Ayam, Singa, Harimau, Anjing) dengan animasi saat hover.
+	// Terdapat tombol kembali ke menu utama.
 	import { goto } from "$app/navigation";
 	import Animal from "$lib/assets/Animal.svelte";
 	import BackButton from "$lib/components/BackButton.svelte";

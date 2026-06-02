@@ -1,4 +1,6 @@
 <script lang="ts">
+	// Komponen ini menampilkan gambar hewan Bintang Laut (SVG)
+	// dengan dukungan animasi seperti berjalan, bermain, dll.
 	import type { AnimalProps } from "./type";
     let {
         el = $bindable(),

@@ -1,5 +1,16 @@
+// File ini berisi data semua hewan yang ditampilkan dalam permainan.
+// Setiap hewan memiliki nama, deskripsi, petunjuk (hint), dan posisi (x, y, width)
+// untuk penempatannya di dalam scene ensiklopedia.
+
 import type { ComponentName } from "./assets/animals";
 
+// Interface AnimalItem mendefinisikan struktur data untuk satu entri hewan.
+// - type: nama komponen Svelte yang merender hewan ini
+// - x, y: koordinat posisi hewan di scene ensiklopedia
+// - width: lebar area hewan di scene
+// - name: nama hewan dalam bahasa Indonesia
+// - description: paragraf penjelasan (bahasa Indonesia, ditampilkan di detail modal)
+// - hint: petunjuk ciri-ciri hewan (digunakan untuk permainan tebak-tebakan)
 export interface AnimalItem {
     type: ComponentName;
     x:number;
@@ -9,6 +20,9 @@ export interface AnimalItem {
     description: string;
     hint: string;
 }
+
+// Array animalListing berisi 50 entri hewan yang menjadi data utama permainan.
+// Setiap entri memiliki komponen SVG, posisi di peta, dan informasi edukatif.
 export const animalListing: AnimalItem[] = [
     {
         type: 'Bat',

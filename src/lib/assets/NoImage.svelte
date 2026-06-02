@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen fallback "Tanpa Gambar" — ditampilkan saat komponen gambar/hewan tidak tersedia.
+	// Merender ikon SVG placeholder dengan teks "tanpa-gambar".
+	// Digunakan oleh Animal, Background, Control, dan Logo saat tipe yang diminta tidak ada.
 	import type { SVGAttributes } from 'svelte/elements';
 
 	let {

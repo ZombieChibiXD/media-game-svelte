@@ -1,4 +1,8 @@
 <script lang="ts">
+  // Komponen ini menampilkan layar loading dengan pemutaran video.
+  // Saat video selesai diputar, komponen akan memanggil fungsi fnAfterAnimate
+  // yang disediakan oleh komponen induk untuk melanjutkan ke scene berikutnya.
+
   import './loading.css';
   import Animal from '$lib/assets/Animal.svelte';
 	import Background from '$lib/assets/Background.svelte';
@@ -9,10 +13,9 @@
 	import type { HTMLVideoAttributes } from 'svelte/elements';
 
   interface Props {
-    /** The onclick event handler */
-    // onclick?: () => void;
-    /** Whether to animate the loading component */
+    /** Apakah video loading akan dijalankan otomatis */
     animate?: boolean;
+    /** Fungsi callback yang dipanggil setelah animasi/video selesai */
     fnAfterAnimate?: () => void;
   }
 
@@ -22,9 +25,11 @@
     fnAfterAnimate
   }: Props = $props();
 
+  // Referensi ke elemen video HTML
   let el: HTMLVideoElement | null = $state(null)
 
-
+  // Efek reaktif: saat elemen video tersedia, pasang handler onended
+  // untuk memanggil fnAfterAnimate ketika video selesai diputar.
   $effect(()=>{
     if (!el) return;
     el.onended = (e) => {

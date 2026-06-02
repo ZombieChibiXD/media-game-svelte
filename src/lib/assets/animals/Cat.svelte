@@ -1,7 +1,8 @@
 <!-- Cat.svelte -->
 
 <script lang="ts">
-
+	// Komponen ini menampilkan gambar hewan Kucing (SVG)
+	// dengan dukungan animasi seperti berjalan, bermain, dll.
 	import type { AnimalProps } from "./type";
     let {
         el = $bindable(),

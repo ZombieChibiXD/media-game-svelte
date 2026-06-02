@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Halaman demo/pengujian untuk komponen AI Font.
+	// Memungkinkan pengguna mengetik teks dan menyesuaikan skala serta jarak antar huruf.
+	// Menampilkan pratinjau langsung teks dengan efek font berlapis buatan AI.
+	// Bukan bagian dari alur permainan utama — digunakan untuk pengembangan dan debugging.
 	import { AIFont } from '$lib/components/ai-font';
 
 	let input = $state('SVELTEKIT');

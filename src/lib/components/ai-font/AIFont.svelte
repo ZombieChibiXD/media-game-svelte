@@ -1,20 +1,35 @@
 <script lang="ts">
+	// Komponen ini merender teks kustom menggunakan font yang dihasilkan AI (SVG font).
+	// Cara kerjanya: mengambil file font SVG, mengukur dimensi setiap glyph (karakter),
+	// lalu menyusun teks yang diberikan dengan spasi dan skala yang dapat disesuaikan.
+
 	import { onMount } from 'svelte';
 
+	// Kotak pembatas (bounding box) untuk satu glyph
 	interface BBox { x: number; y: number; w: number; h: number; }
+	// Item glyph: karakter dengan kotak pembatasnya
 	type GlyphItem = { c: string; bb: BBox; space: false };
+	// Item spasi (untuk karakter spasi)
 	type SpaceItem = { space: true; w: number };
+	// Item tata letak (layout): bisa berupa glyph atau spasi
 	type LayoutItem = GlyphItem | SpaceItem;
 
 	let { text = '', scale = 1, gap = 10 }: { text?: string; scale?: number; gap?: number } = $props();
 
+	// Konten SVG mentah dari file font
 	let svgContent = $state('');
+	// Peta karakter ke kotak pembatasnya
 	let boxes: Record<string, BBox> = $state({});
+	// Penanda apakah font sudah siap digunakan
 	let ready = $state(false);
+	// Elemen SVG tersembunyi untuk mengukur glyph
 	let measureEl: SVGSVGElement | undefined = $state();
 
+	// Semua karakter yang didukung oleh font (0-9, A-Z)
 	const ALL_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
+	// Saat komponen dipasang: ambil file font SVG, ukur setiap glyph,
+	// lalu tandai komponen sebagai siap.
 	onMount(async () => {
 		const res = await fetch('/fonts/ExportFont.svg');
 		svgContent = await res.text();
@@ -26,15 +41,17 @@
 				try {
 					const r = (el as SVGGraphicsElement).getBBox();
 					boxes[c] = { x: r.x, y: r.y, w: r.width, h: r.height };
-				} catch { /* skip */ }
+				} catch { /* lewati jika tidak bisa diukur */ }
 			}
 		}
+		// Karakter yang tidak ditemukan diberi ukuran default
 		for (const c of ALL_CHARS) {
 			if (!boxes[c]) boxes[c] = { x: 0, y: 0, w: 200, h: 200 };
 		}
 		ready = true;
 	});
 
+	// Tata letak karakter: mengubah teks menjadi array glyph atau spasi
 	let charLayout: LayoutItem[] = $derived(
 		text.toUpperCase().split('').map((c): LayoutItem | null => {
 			if (c === ' ') return { space: true, w: 50 };
@@ -44,6 +61,7 @@
 		}).filter((it): it is LayoutItem => it !== null)
 	);
 
+	// Menghitung posisi x setiap karakter berdasarkan lebar glyph sebelumnya dan gap
 	let positions = $derived.by(() => {
 		let x = 0;
 		return charLayout.map((item) => {
@@ -54,6 +72,7 @@
 		});
 	});
 
+	// Total lebar seluruh teks yang akan dirender
 	let totalW = $derived(
 		charLayout.reduce((s, it, i) => {
 			const w = it.space ? it.w : it.bb.w;
@@ -61,6 +80,7 @@
 		}, 0)
 	);
 
+	// Total tinggi area render (diambil dari glyph tertinggi)
 	let totalH = $derived(
 		Object.values(boxes).length > 0
 			? Math.max(...Object.values(boxes).map(b => b.h), 100) + 5

@@ -1,4 +1,9 @@
 <script lang="ts">
+	// Komponen ini menampilkan permainan mencocokkan (match game) — pemain menghubungkan
+	// kartu hewan di sisi kiri dengan gambar hewan di sisi kanan. Dapat dimainkan dengan
+	// cara drag (seret) dari satu kartu ke kartu lainnya atau tap (ketuk) dua kartu
+	// secara berurutan. Setelah semua pasangan terhubung, dialog skor akan muncul.
+
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
 	import Animal from '$lib/assets/Animal.svelte';
@@ -10,6 +15,7 @@
 	type Point = { x: number; y: number };
 	type Side = 'left' | 'right';
 
+	// Mengacak urutan elemen dalam array menggunakan algoritma Fisher-Yates sederhana.
 	function shuffle<T>(arr: T[]): T[] {
 		return [...arr].sort(() => Math.random() - 0.5);
 	}
@@ -49,6 +55,8 @@
 		initRows();
 	});
 
+	// Menginisialisasi 4 baris permainan: memilih 4 hewan secara acak,
+	// lalu mengacak posisi gambar di sisi kanan agar tidak segaris lurus.
 	function initRows() {
 		const picked = shuffle(animalListing).slice(0, 4);
 		const rightOrder = shuffle(picked.map((a) => a.type));
@@ -61,6 +69,8 @@
 		}));
 	}
 
+	// Mereset papan permainan ke keadaan awal: menghapus semua koneksi,
+	// menutup dialog skor, dan mengacak ulang baris-baris hewan.
 	function restart() {
 		connections = {};
 		score = null;
@@ -69,12 +79,14 @@
 		initRows();
 	}
 
-	// ---- helpers ----
+	// ---- fungsi bantu (helpers) ----
 
+	// Mengambil elemen DOM dari kartu kiri atau kanan dalam satu baris.
 	function rowEl(row: Row, side: Side) {
 		return side === 'left' ? row._leftEl : row._rightEl;
 	}
 
+	// Mengambil ID unik dari kartu kiri atau kanan dalam satu baris.
 	function rowId(row: Row, side: Side) {
 		return side === 'left' ? row.type : row.rightType;
 	}
@@ -119,8 +131,11 @@
 		}
 	}
 
-	// ---- tap-to-connect ----
+	// ---- koneksi dengan tap (ketuk) ----
 
+	// Menangani logika tap pada kartu. Jika kartu yang diketuk sudah terhubung,
+	// putuskan koneksinya. Jika belum ada kartu yang dipilih, tandai kartu ini.
+	// Jika ketukan kedua di sisi berlawanan, buat koneksi baru.
 	function onCardTap(e: MouseEvent, row: Row, side: Side) {
 		if (hasMoved) {
 			hasMoved = false;
@@ -128,45 +143,48 @@
 		}
 		const id = rowId(row, side);
 
-		// tapped a connected card → disconnect it
+		// Kartu yang sudah terhubung → putuskan koneksinya
 		if (isConnected(side, id)) {
 			removeConnection(side, id);
 			selected = null;
 			return;
 		}
 
-		// nothing selected → select this card
+		// Belum ada kartu terpilih → pilih kartu ini
 		if (!selected) {
 			selected = { id, side };
 			return;
 		}
 
-		// tapped same card → deselect
+		// Kartu yang sama diketuk lagi → batalkan pilihan
 		if (selected.id === id && selected.side === side) {
 			selected = null;
 			return;
 		}
 
-		// tapped same side, different card → switch selection
+		// Sisi sama, kartu berbeda → pindahkan pilihan
 		if (selected.side === side) {
 			selected = { id, side };
 			return;
 		}
 
-		// opposite side → connect!
+		// Sisi berlawanan → hubungkan!
 		const leftId = side === 'left' ? id : selected.id;
 		const rightId = side === 'right' ? id : selected.id;
 		connections = { ...connections, [leftId]: rightId };
 		selected = null;
 
+		// Jika semua baris sudah terhubung, tampilkan dialog skor
 		if (Object.keys(connections).length === rows.length) {
 			score = rows.reduce((s, r) => s + (connections[r.type] === r.type ? 1 : 0), 0);
 			dialogEl?.showModal();
 		}
 	}
 
-	// ---- drag-to-connect ----
+	// ---- koneksi dengan drag (seret) ----
 
+	// Memulai operasi drag dari sebuah kartu. Menangkap pointer, mencatat posisi awal,
+	// dan mendaftarkan event listener untuk pergerakan dan pelepasan pointer.
 	function startDrag(e: PointerEvent, row: Row, side: Side) {
 		const id = rowId(row, side);
 		if (isConnected(side, id)) return;
@@ -185,6 +203,8 @@
 		window.addEventListener('pointercancel', onCancel);
 	}
 
+	// Dipanggil saat pointer bergerak selama drag. Memperbarui posisi mouse
+	// menggunakan requestAnimationFrame agar animasi garis tetap halus.
 	function onMove(e: PointerEvent) {
 		if (!hasMoved && (Math.abs(e.clientX - dragStartX) > 3 || Math.abs(e.clientY - dragStartY) > 3)) {
 			hasMoved = true;
@@ -202,6 +222,8 @@
 		cleanupDrag();
 	}
 
+	// Dipanggil saat pointer dilepas. Memeriksa apakah posisi pelepasan berada
+	// di dalam kartu target; jika ya, buat koneksi baru antara kedua kartu.
 	function onRelease(e: PointerEvent) {
 		if (!dragging || !cachedRect) return;
 		const dropPoint = { x: e.clientX - cachedRect.left, y: e.clientY - cachedRect.top };
@@ -227,12 +249,14 @@
 
 		cleanupDrag();
 
+		// Jika semua baris sudah terhubung, tampilkan dialog skor
 		if (Object.keys(connections).length === rows.length) {
 			score = rows.reduce((s, r) => s + (connections[r.type] === r.type ? 1 : 0), 0);
 			dialogEl?.showModal();
 		}
 	}
 
+	// Membersihkan semua state drag dan melepas event listener dari window.
 	function cleanupDrag() {
 		dragging = null;
 		mouse = null;
@@ -242,8 +266,10 @@
 		window.removeEventListener('pointercancel', onCancel);
 	}
 
-	// ---- line rendering ----
+	// ---- rendering garis koneksi ----
 
+	// Menghitung koordinat garis lurus antara dua kartu yang sudah terhubung.
+	// Garis ditarik dari tepi kanan kartu kiri ke tepi kiri kartu kanan.
 	function getLine(fromId: string, toId: string) {
 		const leftRow = rows.find((r) => r.type === fromId);
 		const rightRow = rows.find((r) => r.rightType === toId);

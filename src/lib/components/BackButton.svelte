@@ -1,10 +1,16 @@
 <script lang="ts">
+	// Komponen tombol kembali (Back) yang dapat digunakan ulang.
+	// Menampilkan ikon panah SVG dan teks "Kembali" menggunakan AIFont.
+	// Menerima properti onclick untuk navigasi dan title untuk tooltip.
+
 	import { cn } from "$lib/utils";
 	import type { HTMLButtonAttributes } from "svelte/elements";
 	import { AIFont } from "./ai-font";
 
 	type Props = HTMLButtonAttributes & {
+		// Fungsi yang dipanggil saat tombol diklik
 		onclick: (e: MouseEvent) => void;
+		// Teks tooltip (default: "Kembali")
         title?: string;
 	};
 

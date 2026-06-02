@@ -1,4 +1,9 @@
 <script lang="ts">
+	// Permainan 3: Cari Hewan.
+	// Menampilkan petunjuk (hint) dalam sebuah modal dialog yang muncul otomatis saat halaman dibuka.
+	// Pemain harus menemukan hewan yang benar di dalam lanskap yang dapat digulir secara horizontal.
+	// Jika jawaban benar, dialog sukses muncul dengan skor 100 dan opsi "Kembali" atau "Ulangi".
+	// Tombol bantuan (?) di pojok kanan atas untuk membuka kembali dialog petunjuk.
 	import { goto } from "$app/navigation";
 	import { animalListing } from "$lib/animalData";
 	import Animal from "$lib/assets/Animal.svelte";

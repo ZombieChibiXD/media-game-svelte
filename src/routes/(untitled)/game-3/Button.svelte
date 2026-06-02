@@ -1,4 +1,6 @@
 <script lang="ts">
+	// Komponen tombol yang dapat digunakan ulang untuk halaman Game 3 (Cari Hewan).
+	// Serupa dengan Button di level-select dan encyclopedia: menerima state hover/click dan fnAnimateState.
 	import Animal from "$lib/assets/Animal.svelte";
 	import type { ComponentName } from "$lib/assets/animals";
 	import type { AnimalProps } from "$lib/assets/animals/type";

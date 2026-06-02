@@ -1,3 +1,7 @@
+// File barrel untuk semua komponen hewan (50+ hewan SVG).
+// Mengekspor setiap komponen hewan, tipe ComponentName, dan daftar nama komponen.
+// Digunakan oleh animalData.ts dan halaman game untuk merender hewan secara dinamis.
+
 import type { AnimalProps } from "./type";
 import type { Component } from "svelte"
 import Bat from "./Bat.svelte";
@@ -46,6 +50,8 @@ import Wasp from "./Wasp.svelte";
 import Wolf from "./Wolf.svelte";
 import Zebra from "./Zebra.svelte";
 
+// Objek internal yang memetakan nama komponen hewan ke komponen Svelte-nya.
+// Digunakan untuk menghasilkan tipe ComponentName dan array ComponentNames.
 const __animalComponents = {
   Bat,
   Bee,
@@ -94,6 +100,7 @@ const __animalComponents = {
   Zebra,
 } as const;
 
+// Ekspor semua komponen hewan individual + objek __animalComponents dengan alias Components.
 export {
   Bat,
   Bee,
@@ -140,6 +147,9 @@ export {
   Wolf,
   Zebra, __animalComponents as Components };
 
-
+// Tipe ComponentName: union dari semua nama komponen hewan (misal 'Bat' | 'Bee' | ...).
 export type ComponentName = keyof typeof __animalComponents;
+
+// Array ComponentNames: daftar semua nama komponen hewan sebagai string[].
+// Berguna untuk iterasi atau validasi.
 export const ComponentNames = Object.keys(__animalComponents) as ComponentName[];

@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen ikon X (tutup) yang dapat digunakan ulang.
+	// Menampilkan gambar tombol X dari file xbutton.webp dalam elemen SVG.
+
 	import type { SVGAttributes } from "svelte/elements";
 
 	let { class: className, ...restProps }: SVGAttributes<SVGElement> = $props();

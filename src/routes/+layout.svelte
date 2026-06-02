@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Tata letak akar (root layout) untuk seluruh aplikasi.
+	// Menangani: deteksi orientasi layar (lanskap/potret), tombol layar penuh,
+	// musik latar belakang, preload gambar, dan transisi antar halaman.
+	// Kontainer game menggunakan rasio aspek 16:9 yang responsif.
 	import '../app.css';
 	import { afterNavigate, goto, onNavigate } from '$app/navigation';
 	import { onMount } from 'svelte';

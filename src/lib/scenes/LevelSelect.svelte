@@ -1,10 +1,11 @@
 <script lang="ts">
+	// Komponen placeholder untuk halaman pemilihan level.
+	// Saat ini hanya menampilkan teks "Pilih Level"; akan dikembangkan lebih lanjut.
+
 	import Background from '$lib/assets/Background.svelte';
 
   interface Props {
-    /** The onclick event handler */
-    // onclick?: () => void;
-    /** Whether to animate the loading component */
+    /** Apakah komponen akan dianimasikan */
     animate?: boolean;
   }
 </script>

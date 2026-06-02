@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Sub-komponen scrollbar untuk scroll-area.
+	// Menampilkan thumb (pegangan gulir) yang ukurannya proporsional
+	// dengan konten yang terlihat. Mendukung orientasi vertikal dan horizontal.
+
 	import { ScrollArea as ScrollAreaPrimitive } from "bits-ui";
 	import { cn, type WithoutChild } from "$lib/utils.js";
 

@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen Background — merender latar belakang berdasarkan tipe yang dipilih.
+	// Menerima properti 'type' (nama background) dan 'children' (slot konten di dalamnya).
+	// Jika tipe tidak dikenali, menampilkan NoImage sebagai fallback.
 	import { Components as BackgroundComponents, type ComponentName } from './backgrounds';
 	import NoImage from './NoImage.svelte';
 	import type { Snippet } from 'svelte';

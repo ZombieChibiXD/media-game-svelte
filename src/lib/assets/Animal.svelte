@@ -1,5 +1,9 @@
 <!-- src/lib/components/Animal.svelte -->
 <script lang="ts">
+	// Komponen Animal — merender gambar SVG hewan berdasarkan tipe yang dipilih.
+	// Menerima properti 'type' (nama hewan) dan properti lainnya untuk SVG.
+	// Jika tipe tidak dikenali atau tidak tersedia, menampilkan komponen NoImage sebagai fallback.
+	// Mendukung animasi (properti 'animate') untuk efek seperti hewan berjalan.
 	import type { SVGAttributes } from 'svelte/elements';
   import { Components as AnimalComponents, type ComponentName } from './animals';
 	import type { AnimalProps } from './animals/type';

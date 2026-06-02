@@ -1,4 +1,8 @@
 <script>
+	// Halaman menu utama — pusat navigasi aplikasi.
+	// Menampilkan logo sekolah, teks AI Font ("Mari belajar mengenal hewan bersama di SD Saraswati 4 Denpasar"),
+	// dan tombol "Main" yang mengarah ke halaman pemilihan level (/level-select).
+	// Tombol memiliki efek hover (berubah antara play.svg dan play_hover.svg).
 	import { cn } from "$lib/utils";
 	import { AIFont } from '$lib/components/ai-font';
 	import Landing from '$lib/Landing.webp'

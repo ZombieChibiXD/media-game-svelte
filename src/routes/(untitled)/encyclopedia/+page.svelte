@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Halaman ensiklopedia satwa.
+	// Menampilkan daftar hewan yang dapat digulir secara horizontal (drag-to-scroll).
+	// Setiap hewan dapat diklik untuk membuka dialog modal berisi detail (nama, deskripsi, dan audio TTS).
+	// Dialog modal menampilkan animasi hewan berjalan dan teks deskripsi yang dapat digulir.
 	import { goto } from "$app/navigation";
 	import { animalListing } from "$lib/animalData";
 	import Animal from "$lib/assets/Animal.svelte";

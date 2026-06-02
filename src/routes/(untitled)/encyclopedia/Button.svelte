@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen tombol yang dapat digunakan ulang untuk halaman ensiklopedia.
+	// Serupa dengan Button level-select: menerima state hover/click dan fnAnimateState.
+	// Menggunakan anchor (<a>) dengan pointerenter/pointerleave untuk mengubah state tombol.
 	import Animal from "$lib/assets/Animal.svelte";
 	import type { ComponentName } from "$lib/assets/animals";
 	import type { AnimalProps } from "$lib/assets/animals/type";

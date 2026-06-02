@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen ikon tanda tanya (?) yang dapat digunakan ulang.
+	// Menampilkan gambar tanda tanya dari file question.webp dalam elemen SVG.
+
 	import type { SVGAttributes } from "svelte/elements";
 
 	let { class: className, ...restProps }: SVGAttributes<SVGElement> = $props();

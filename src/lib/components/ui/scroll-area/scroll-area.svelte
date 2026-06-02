@@ -1,4 +1,8 @@
 <script lang="ts">
+	// Komponen area yang dapat digulir (scrollable).
+	// Dibangun di atas ScrollArea dari bits-ui, mendukung orientasi vertikal,
+	// horizontal, atau keduanya. Menampilkan scrollbar sesuai orientasi yang dipilih.
+
 	import { ScrollArea as ScrollAreaPrimitive } from "bits-ui";
 	import { Scrollbar } from "./index.js";
 	import { cn, type WithoutChild } from "$lib/utils.js";
@@ -13,9 +17,13 @@
 		children,
 		...restProps
 	}: WithoutChild<ScrollAreaPrimitive.RootProps> & {
+		// Orientasi scroll: vertikal, horizontal, atau keduanya
 		orientation?: "vertical" | "horizontal" | "both" | undefined;
+		// Kelas CSS tambahan untuk scrollbar horizontal
 		scrollbarXClasses?: string | undefined;
+		// Kelas CSS tambahan untuk scrollbar vertikal
 		scrollbarYClasses?: string | undefined;
+		// Referensi ke elemen viewport
 		viewportRef?: HTMLElement | null;
 	} = $props();
 </script>

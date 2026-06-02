@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen tombol yang dapat digunakan ulang untuk halaman pemilihan level.
+	// Menerima state hover/click dan fungsi animasi (fnAnimateState) untuk mengontrol animasi hewan.
+	// Menggunakan Snippet (slot Svelte 5) agar konten tombol dapat dikustomisasi sepenuhnya.
 	import Animal from "$lib/assets/Animal.svelte";
 	import type { ComponentName } from "$lib/assets/animals";
 	import type { AnimalProps } from "$lib/assets/animals/type";

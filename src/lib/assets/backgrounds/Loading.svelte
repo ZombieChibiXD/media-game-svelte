@@ -1,4 +1,7 @@
 <script lang="ts">
+	// Komponen latar belakang loading — menampilkan pola SVG berulang (warna ungu-abu).
+	// Digunakan oleh scene Loading untuk memberi tampilan latar saat animasi loading berjalan.
+	// Pola dibuat dengan data URI SVG yang diulang (background-repeat).
 	import { cn } from "$lib/utils";
 
 </script>

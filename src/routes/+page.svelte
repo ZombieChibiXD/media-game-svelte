@@ -1,4 +1,7 @@
 <script>
+	// Halaman landing (pembuka) — layar pertama yang dilihat pemain.
+	// Menampilkan gambar latar belakang dan tombol "Play" berbentuk segitiga.
+	// Saat tombol diklik, pengguna diarahkan ke /loading.
 	import { cn } from "$lib/utils";
 	import Landing from '$lib/Landing.webp'
 
