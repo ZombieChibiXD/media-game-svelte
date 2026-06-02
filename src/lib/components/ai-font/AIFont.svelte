@@ -16,7 +16,7 @@
 	const ALL_CHARS = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 	onMount(async () => {
-		const res = await fetch('/fonts/RefactoredFont.svg');
+		const res = await fetch('/fonts/ExportFont.svg');
 		svgContent = await res.text();
 		await new Promise(r => setTimeout(r, 400));
 		if (!measureEl) return;
