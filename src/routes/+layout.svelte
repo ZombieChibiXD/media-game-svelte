@@ -79,7 +79,7 @@
 	<link rel="prefetch" as="image" href={LevelSelectImg} />
 	<link rel="prefetch" as="image" href={EncyclopediaImg} />
   <!-- Prefetch font svg -->
-  <link rel="preload" as="image" href="/fonts/SortedAIFont.svg" />
+  <link rel="preload" as="image" href="/fonts/ExportFont.svg" />
 </svelte:head>
 
 {#if !isLandscape}
