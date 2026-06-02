@@ -1730,13 +1730,6 @@
        height="79.989548"
        x="4.2632564e-14"
        y="499.3356" />
-    <rect
-       style="fill:#aa0000;fill-opacity:1;stroke:none;stroke-width:7.69899;stroke-linecap:round;stroke-linejoin:round;paint-order:stroke markers fill"
-       id="debug_box"
-       width="27.224134"
-       height="26.575939"
-       x="21.390392"
-       y="521.19684" />
   </g>
   <rect
      style="font-variation-settings:normal;opacity:1;fill:url(#linearGradient421);fill-opacity:1;stroke:url(#linearGradient423);stroke-width:4.99935;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;paint-order:stroke markers fill"
