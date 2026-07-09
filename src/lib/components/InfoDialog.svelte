@@ -44,7 +44,7 @@
 				<audio autoplay controls src={audioSrc} />
 			{/if}
 			{#if name}
-				<p class="bg-gray-500 text-center font-semibold font-schoolbell mt-[1cqb] rounded-full p-[1cqb]">
+				<p class="bg-gray-500 text-center font-semibold font-arial mt-[1cqb] rounded-full p-[1cqb]">
 					{name}
 				</p>
 			{/if}
