@@ -82,8 +82,43 @@
 	<link rel="preload" as="image" href={LandingImg} />
 	<link rel="prefetch" as="image" href={LevelSelectImg} />
 	<link rel="prefetch" as="image" href={EncyclopediaImg} />
-  <!-- Prefetch font svg -->
-  <link rel="preload" as="image" href="/fonts/ExportFont.svg" />
+  <!-- Preload font PNGs -->
+  <link rel="preload" as="image" href="/fonts/png/0@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/1@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/2@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/3@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/4@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/5@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/6@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/7@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/8@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/9@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/a@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/b@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/c@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/d@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/e@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/f@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/g@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/h@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/i@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/j@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/k@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/l@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/m@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/n@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/o@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/p@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/q@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/r@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/s@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/t@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/u@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/v@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/w@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/x@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/y@2x.png" />
+  <link rel="preload" as="image" href="/fonts/png/z@2x.png" />
 </svelte:head>
 
 {#if !isLandscape}
