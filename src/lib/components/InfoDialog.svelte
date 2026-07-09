@@ -40,9 +40,9 @@
 				<Animal type={animal} animate="walk" class={animalClass} />
 
 			</div>
-			{#if audioSrc}
+			<!-- {#if audioSrc}
 				<audio autoplay controls src={audioSrc} />
-			{/if}
+			{/if} -->
 			{#if name}
 				<p class="bg-gray-500 text-center font-semibold font-arial mt-[1cqb] rounded-full p-[1cqb]">
 					{name}
