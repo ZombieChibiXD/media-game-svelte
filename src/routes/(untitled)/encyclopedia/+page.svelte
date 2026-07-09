@@ -121,7 +121,7 @@
 				{selectedName}
 			</p>
 		</aside>
-		<div class="basis-3/5 relative font-semibold font-schoolbell text-center">
+		<div class="basis-3/5 relative font-semibold font-arial text-center">
 			<div class="absolute inset-0">
 				<ScrollArea class="h-full w-full p-[2cqb]">
 					{#each selectedDescription.split('\n') as line}

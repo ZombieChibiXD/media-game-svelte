@@ -119,7 +119,7 @@
 		<aside class="basis-2/5">
 			<Animal type={prop.data.selectedAnimalComponent.type} animate="walk" class="**:fill-[black_!important] w-full"/>
 		</aside>
-		<div class="basis-3/5 relative font-semibold font-schoolbell text-center">
+		<div class="basis-3/5 relative font-semibold font-arial text-center">
 			<div class="absolute inset-0">
 				<ScrollArea class="h-full w-full p-[2cqb]">
 					{#each prop.data.selectedAnimalComponent.hint.split('\n') as line}
