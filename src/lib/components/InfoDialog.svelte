@@ -23,7 +23,7 @@
 
 <dialog
 	bind:this={dialogEl}
-	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[100cqb]"
+	class="m-auto p-[5cqb] text-[2.5cqb] rounded-2xl relative w-full max-w-[100cqb]"
 	{...{'aria-description': 'animal description'}}>
 	<button
 		class="absolute top-[1cqb] right-[1cqb] text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
@@ -36,7 +36,10 @@
 	</button>
 	<article class="flex gap-[3cqb] h-full w-full">
 		<aside class="basis-2/5">
-			<Animal type={animal} animate="walk" class={animalClass} />
+			<div class="flex justify-center items-center *:max-h-[30cqb]">
+				<Animal type={animal} animate="walk" class={animalClass} />
+
+			</div>
 			{#if audioSrc}
 				<audio autoplay controls src={audioSrc} />
 			{/if}
