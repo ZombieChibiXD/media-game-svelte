@@ -112,7 +112,7 @@
        style="display:inline;fill:url(#linearGradient22);stroke:url(#linearGradient3);stroke-width:5px;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
 </svg>
-<span class="pt-2">
+<span class="">
     <AIFont text={"Kembali"} scale={0.4} gap={2} />
 </span>
 
