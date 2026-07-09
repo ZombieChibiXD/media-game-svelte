@@ -9,6 +9,7 @@
 	import Animal from "$lib/assets/Animal.svelte";
 	import type { ComponentName } from "$lib/assets/animals";
 	import BackButton from "$lib/components/BackButton.svelte";
+	import InfoDialog from "$lib/components/InfoDialog.svelte";
 	import { ScrollArea } from "$lib/components/ui/scroll-area/index.js";
 	import XIcon from "$lib/components/XIcon.svelte";
 
@@ -99,37 +100,12 @@
 	</div>
 </ScrollArea>
 
-<dialog
-	bind:this={dialogEl}
-	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[100cqb]"
->
-	<button
-		class="absolute top-[1cqb] right-[1cqb] text-white p-[0.25cqb] w-[4cqb] rounded-full cursor-pointer"
-		type="reset"
-		onclick={() => {
-			dialogEl?.close();
-		}}
-		aria-label="Tutup"
-		autofocus
-	>
-		<XIcon />
-
-	</button>
-	<article class="flex gap-[3cqb] h-full w-full">
-		<aside class="basis-2/5">
-			<Animal type={prop.data.selectedAnimalComponent.type} animate="walk" class="**:fill-[black_!important] w-full"/>
-		</aside>
-		<div class="basis-3/5 relative font-semibold font-arial text-center">
-			<div class="absolute inset-0">
-				<ScrollArea class="h-full w-full p-[2cqb]">
-					{#each prop.data.selectedAnimalComponent.hint.split('\n') as line}
-						{line}<br />
-					{/each}
-				</ScrollArea>
-			</div>
-		</div>
-	</article>
-</dialog>
+<InfoDialog
+	bind:dialogEl
+	animal={prop.data.selectedAnimalComponent.type}
+	lines={prop.data.selectedAnimalComponent.hint.split('\n')}
+	animalClass="**:fill-[black_!important] w-full"
+/>
 
 
 <dialog

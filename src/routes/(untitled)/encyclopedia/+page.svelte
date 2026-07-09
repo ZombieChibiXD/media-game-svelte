@@ -8,8 +8,8 @@
 	import Animal from "$lib/assets/Animal.svelte";
 	import type { ComponentName } from "$lib/assets/animals";
 	import BackButton from "$lib/components/BackButton.svelte";
+	import InfoDialog from "$lib/components/InfoDialog.svelte";
 	import { ScrollArea } from "$lib/components/ui/scroll-area/index.js";
-	import XIcon from "$lib/components/XIcon.svelte";
 
 	import { cn } from "$lib/utils";
 	import Button from "./Button.svelte";
@@ -96,42 +96,13 @@
 	</div>
 </ScrollArea>
 
-<dialog
-	bind:this={dialogEl}
-	class="m-auto p-[5cqb] text-[2cqb] rounded-2xl relative w-full max-w-[100cqb]"
->
-	<button
-		class="absolute top-[1cqb] right-[1cqb] text-white p-[0.25cqb] w-[4cqb] rounded-full"
-		type="reset"
-		onclick={() => {
-			dialogEl?.close();
-		}}
-		aria-label="Tutup"
-		autofocus
-	>
-	    <XIcon  />
-	</button>
-	<article class="flex gap-[3cqb] h-full w-full">
-		<aside class="basis-2/5">
-			<Animal type={selectedAnimal} animate="walk" />
-			<audio autoplay controls src="/audios/tts/{selectedAnimal}.mp3"></audio>
-			<p
-				class=" bg-gray-500 text-center font-semibold font-schoolbell mt-[1cqb] rounded-full p-[1cqb]"
-			>
-				{selectedName}
-			</p>
-		</aside>
-		<div class="basis-3/5 relative font-semibold font-arial text-center">
-			<div class="absolute inset-0">
-				<ScrollArea class="h-full w-full p-[2cqb]">
-					{#each selectedDescription.split('\n') as line}
-						{line}<br />
-					{/each}
-				</ScrollArea>
-			</div>
-		</div>
-	</article>
-</dialog>
+<InfoDialog
+	bind:dialogEl
+	animal={selectedAnimal}
+	lines={selectedDescription.split('\n')}
+	audioSrc={selectedAnimal ? `/audios/tts/${selectedAnimal}.mp3` : ''}
+	name={selectedName}
+/>
 
 
 <BackButton onclick={()=>{ goto('/level-select') }} />
